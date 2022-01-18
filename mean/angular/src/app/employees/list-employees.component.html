@@ -1,0 +1,39 @@
+<!--<p>list-employees works!</p> -->
+<!--<h3>{{employees | json}}</h3>  -->
+
+
+
+
+
+
+    <div class="panel panel-primary" *ngFor="let employee of employees">
+      <div class="panel-heading">
+        <!--<div class="panel-title">NAME: </div>-->
+        <div class="panel-title"> {{employee.name}} </div> 
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-10">
+          <div class="row" > 
+            <!--<div class="col-xs-4"></div> -->
+            <div class="col-xs-8">
+              <div class="row">
+                <div class="col-xs-4">ID</div>
+                <div class="col-xs-4">: {{employee.id}}</div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">GENDER</div>
+                <div class="col-xs-4">: {{employee.gender}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-primary" (click) = "editEmployee(employee.id)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+      </div>
+    </div>
+
+    
+ 
+

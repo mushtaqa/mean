@@ -1,0 +1,25 @@
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee()">
+<div class="panel panel-primary" *ngIf="employee">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Create Employee</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" class="form-control" [(ngModel)]="employee.id">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" [(ngModel)]="employee.name">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender" [(ngModel)]="employee.gender" class="form-control">
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</div>
+
+</form>
